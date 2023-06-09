@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  color: 	#0f1010;
+  background: white;
+}
+
+header {
+  background: url('/images/carpentry-image-1-lighter.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
+background-size: cover;
+
+
+
+}
+
+.tooltip-container {
+position: relative;
+display: inline-block;
+top: calc(-100% -50px);
+transform: translateX(-50%);
+}
+
+.tooltip {
+  position: absolute;
+  margin-top: 2px;
+  background: #2a2727;
+  color: white;
+  border-radius: 8px;
+  padding: 6px 8px;
+  z-index: 1;
+
+
+
+}
