@@ -9,25 +9,25 @@ const roboto = Roboto({
 export const metadata = {
   title: `O'Brien Construction`,
   description:
-    'The portfolio site of full stack developer Clark Smith, check out some of the projects Clark has built!',
+    'New Construction, Remodels, Restorations, Roofs, Decks, Kitchens, Bathrooms, Mitigation, Painting, Concrete, Electrical, Plumbing, Framing, Drywall, and More',
   creator: 'Clark Smith',
   author: 'Clark Smith',
   type: 'website',
-  siteName: `'O'Brien Construction'`,
+  siteName: `O'Brien Construction`,
   openGraph: {
-    title: `'O'Brien Construction'`,
+    title: `O'Brien Construction`,
     description:
-      'The portfolio site of full stack developer Clark Smith, check out some of the projects Clark has built!',
-    url: 'https://www.clarksmith.dev',
-    siteName: `'O'Brien Construction'`,
+      'New Construction, Remodels, Restorations, Roofs, Decks, Kitchens, Bathrooms, Mitigation, Painting, Concrete, Electrical, Plumbing, Framing, Drywall, and More',
+    url: 'https://www.obrienconstruction.com',
+    siteName: `O'Brien Construction`,
     images: [
       {
-        url: 'https://images.ctfassets.net/mrg9gspwlszz/7lPe1ziYbXKC1JBCEja3lG/5449926b85a176382fdbc2e9a3ab85b5/profile-pic-2.jpeg',
+        url: 'https//images.ctfassets.net/y9nl7oaic35n/3XRPIyccHhJMegiqVEmmjn/1266e263a968013be628247b9322dbe1/OB_Logo_Saw.png',
         width: 600,
         height: 600,
       },
       {
-        url: 'https://images.ctfassets.net/mrg9gspwlszz/7lPe1ziYbXKC1JBCEja3lG/5449926b85a176382fdbc2e9a3ab85b5/profile-pic-2.jpeg',
+        url: 'https//images.ctfassets.net/y9nl7oaic35n/3XRPIyccHhJMegiqVEmmjn/1266e263a968013be628247b9322dbe1/OB_Logo_Saw.png',
         width: 1600,
         height: 1600,
         alt: 'preview image',
