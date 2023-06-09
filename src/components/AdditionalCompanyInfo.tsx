@@ -25,7 +25,7 @@ const AdditionalCompanyInfo  = ({companyProfile}: { companyProfile: any}) => {
           <div className="text-[24px] font-bold ">Michael Patrick O'Brien</div>
           <div className="flex-wrap p-1 pl-4">{description}</div>
         </div>
-        <div className="sm:w-[50%] p-4">
+        <div className="sm:w-[50%]">
           <Attributes attributes={companyProfile.attributes} />
         </div>
       </div>

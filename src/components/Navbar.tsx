@@ -7,7 +7,7 @@ const Navbar = ({profile}: {profile: any}) => {
     return (
       <div>
         <div className="flex flex-row justify-center items-end  p-6 pb-1 pt-3">
-          <div className=" flex flex-col items-center sm:mr-6">
+          <div className=" flex flex-col items-center ml-10 sm:ml-0 sm:mr-6">
             <Image
               width={150}
               height={150}

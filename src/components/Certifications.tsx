@@ -5,7 +5,7 @@ const Certifications = ({certifications}: {certifications: any }) => {
     console.log({certifications})
     
     return (
-      <div className="sm:pl-8 pb-4">
+      <div className="sm:pl-8 py-4">
         <div className="text-[24px] text-center sm:text-left font-bold">
           Certifications & Education
         </div>
@@ -14,7 +14,7 @@ const Certifications = ({certifications}: {certifications: any }) => {
             return (
               <div
                 key={certification}
-                className="py-1 text-[12px] sm:text-[16px] mr-1"
+                className="py-1 text-[12px] sm:text-[16px] mr-2"
               >
                 • {certification}
               </div>
