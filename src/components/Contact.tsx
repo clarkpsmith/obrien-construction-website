@@ -20,10 +20,7 @@ const ContactForm = ({profile}: {profile: any}) => {
   return (
     <div className="p-4 text-white bg-black">
       <div className="flex">
-        <div className="text-[24px]  sm:text-[40px] w-full flex justify-center items-center text-center">
-          <span className="hidden sm:block pr-4 pt-[2px]">
-            <Image alt="logo" width={60} height={60} src={`https:${logo}`} />{' '}
-          </span>
+        <div className="text-[24px]  sm:text-[32px] w-full flex justify-center items-center text-center">
           <span className="py-2">{`Contact ${profile.name}`}</span>
         </div>
       </div>
