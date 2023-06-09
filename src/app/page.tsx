@@ -48,17 +48,19 @@ console.log({companyProfile})
 
   return (
     <div>
-      <header>
-      <Navbar profile={companyProfile}/>
-      <CompanyDescription companyProfile={companyProfile}/>
-      </header>
-      <AdditionalCompanyInfo companyProfile={companyProfile}/>
-      <Certifications certifications={companyProfile.certifications}/>
-    <div>
+      <div className="w-full">
+        <header>
+          <Navbar profile={companyProfile} />
+          <CompanyDescription companyProfile={companyProfile} />
+        </header>
+      </div>
+      <AdditionalCompanyInfo companyProfile={companyProfile} />
+      <Certifications certifications={companyProfile.certifications} />
       <div>
-        <Footer profile={companyProfile} />
+        <div>
+          <Footer profile={companyProfile} />
+        </div>
       </div>
-      </div>
-</div>
+    </div>
   )
 }

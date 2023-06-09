@@ -20,7 +20,7 @@ const ContactForm = ({profile}: {profile: any}) => {
   return (
     <div className="p-4 text-white bg-black">
       <div className="flex">
-        <div className="text-[40px] w-full flex justify-center items-center text-center">
+        <div className="text-[24px] sm:text-[40px] w-full flex justify-center items-center text-center">
           {' '}
           <span className="pr-4 pt-[2px]">
             <Image alt="logo" width={60} height={60} src={`https:${logo}`} />{' '}
@@ -29,7 +29,7 @@ const ContactForm = ({profile}: {profile: any}) => {
         </div>
       </div>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-        <div className="mb-4">
+        <div className="text-[12px] sm: text-[16px] mb-4">
           <label htmlFor="name" className="block mb-2 text-lg font-medium">
             Name
           </label>
