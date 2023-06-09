@@ -15,13 +15,15 @@ const ContactForm = ({profile}: {profile: any}) => {
 
   const logo: string = profile.logo.fields.file.url
 
+  console.log({ logo })
+
   return (
     <div className="p-4 text-white bg-black">
       <div className="flex">
         <div className="text-[40px] w-full flex justify-center items-center text-center">
           {' '}
           <span className="pr-4 pt-[2px]">
-            <Image alt="logo" width={60} height={60} src={`https://${logo}`} />{' '}
+            <Image alt="logo" width={60} height={60} src={`https:${logo}`} />{' '}
           </span>
           <span className="pt-2">{`Contact ${profile.name}`}</span>
         </div>

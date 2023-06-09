@@ -9,9 +9,11 @@ const Certifications = ({certifications}: {certifications: any }) => {
             <div className="text-[24px]  font-bold">Certifications & Education</div>
             <div className="pl-2">
             {certifications.map((certification: string) => {
-                return <div className="py-1">
-                   • {certification}
-                    </div>
+                return (
+                  <div key={certification} className="py-1">
+                    • {certification}
+                  </div>
+                )
  
             })}
               </div>
