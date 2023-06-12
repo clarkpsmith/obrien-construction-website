@@ -19,7 +19,6 @@ const Navbar = ({profile}: {profile: any}) => {
             </div>
           </div>
           <NavItem name="ABOUT" />
-          <NavItem name="SERVICES" />
           <NavItem name="WORK" />
           <NavItem name="CONTACT" />
           <div className="sm:flex-grow"></div>
@@ -38,7 +37,6 @@ const Navbar = ({profile}: {profile: any}) => {
             </a>
           </div>
         </div>
-        {/* <div className="w-[335px] bg-[white] h-[3px]"/> */}
       </div>
     )
 

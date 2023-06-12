@@ -12,9 +12,9 @@ import AdditionalCompanyInfo from "@/components/AdditionalCompanyInfo"
 import ContactForm from "@/components/Contact"
 import Footer from "@/components/Footer"
 import Certifications from "@/components/Certifications"
+import Gallery from '@/components/Gallery'
 
 export default async function Home() {
-
   async function fetchContentfulData() {
     const client = createClient({
       space: String(process.env.CONTENTFUL_SPACE_ID),
@@ -29,22 +29,22 @@ export default async function Home() {
     const profile = await client.getEntries({ content_type: 'profile' })
     const companyProfile = profile.items[0].fields
     const services = await client.getEntries({ content_type: 'services' })
-    const testimonials = await client.getEntries({ content_type: 'testimonials' })
+    const testimonials = await client.getEntries({
+      content_type: 'testimonials',
+    })
 
     return {
       companyProfile,
       projects,
-      services, 
-      testimonials
+      services,
+      testimonials,
     }
   }
 
-  const {  companyProfile,
-    projects,
-    services, 
-    testimonials } = await fetchContentfulData()
+  const { companyProfile, projects, services, testimonials } =
+    await fetchContentfulData()
 
-console.log({companyProfile})
+  console.log({ companyProfile })
 
   return (
     <div>
@@ -56,6 +56,7 @@ console.log({companyProfile})
       </div>
       <AdditionalCompanyInfo companyProfile={companyProfile} />
       <Certifications certifications={companyProfile.certifications} />
+      <Gallery projects={projects} />
       <div>
         <div>
           <Footer profile={companyProfile} />
