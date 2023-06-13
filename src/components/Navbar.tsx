@@ -18,9 +18,9 @@ const Navbar = ({profile}: {profile: any}) => {
               {profile.name}
             </div>
           </div>
-          <NavItem name="ABOUT" />
-          <NavItem name="WORK" />
-          <NavItem name="CONTACT" />
+          <NavItem name="about" />
+          <NavItem name="work" />
+          <NavItem name="contact" />
           <div className="sm:flex-grow"></div>
           <div></div>
           <div className="ml-4">
