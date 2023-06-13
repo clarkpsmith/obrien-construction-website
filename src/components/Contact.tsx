@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik'
 import * as Yup from 'yup'
+import axios from 'axios'
 
 const ContactForm = ({ profile }: { profile: any }) => {
   const [sending, setSending] = useState<boolean>(false)
@@ -49,7 +50,7 @@ const ContactForm = ({ profile }: { profile: any }) => {
     }
 
     try {
-      await mg.messages().send(data)
+      const res = await axios.post('/api/sendEmail', { data })
       setSending(false)
       setSent(true)
     } catch (error) {}
