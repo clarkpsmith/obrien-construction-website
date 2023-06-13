@@ -11,7 +11,10 @@ const Gallery = ({ projects }: { projects: any }) => {
       </div>
       <div className="flex flex-wrap justify-center  bg-black items-center">
         {projects.items.map((p: any) => (
-          <WorkComponent imageUrl={p.fields.image.fields.file.url} />
+          <WorkComponent
+            key={p.fields.image.fields.file.url}
+            imageUrl={p.fields.image.fields.file.url}
+          />
         ))}
       </div>
     </div>
