@@ -25,7 +25,7 @@ const Navbar = ({profile}: {profile: any}) => {
           <div></div>
           <div className="ml-4">
             <a href={profile.instagram}>
-              <div className="mb-2 cursor-pointer">
+              <div className="mb-[6px] cursor-pointer">
                 {' '}
                 <Image
                   alt="instagram icon"

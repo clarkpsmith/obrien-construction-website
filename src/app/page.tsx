@@ -1,18 +1,11 @@
-
-import ProfileInfo from "../components/ProfileInfo"
-import ProjectsComponent from '@/components/ProjectsComponent'
 import { createClient } from 'contentful'
-import Socials from '@/components/Socials'
-import Name from '@/components/Name'
-import NavItem from "@/components/NavItem"
-import Navbar from "@/components/Navbar"
-import CompanyDescription from "@/components/CompanyDescription"
-import Image from "next/image"
-import AdditionalCompanyInfo from "@/components/AdditionalCompanyInfo"
-import ContactForm from "@/components/Contact"
-import Footer from "@/components/Footer"
-import Certifications from "@/components/Certifications"
+import Navbar from '@/components/Navbar'
+import CompanyDescription from '@/components/CompanyDescription'
+import AdditionalCompanyInfo from '@/components/AdditionalCompanyInfo'
+import Footer from '@/components/Footer'
+import Certifications from '@/components/Certifications'
 import Gallery from '@/components/Gallery'
+import Testimonials from '@/components/Testimonials'
 
 export default async function Home() {
   async function fetchContentfulData() {
@@ -57,6 +50,7 @@ export default async function Home() {
       <AdditionalCompanyInfo companyProfile={companyProfile} />
       <Certifications certifications={companyProfile.certifications} />
       <Gallery projects={projects} />
+      <Testimonials testimonials={testimonials} />
       <div>
         <div>
           <Footer profile={companyProfile} />

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import WorkComponent from './WorkComponent'
 
 const Gallery = ({ projects }: { projects: any }) => {
-  // bg-[url('/images/wood-floor.jpeg')]
+
   return (
     <section id="work">
       <div className="">
