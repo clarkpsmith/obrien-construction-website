@@ -17,7 +17,7 @@ const BottomContact = ({profile}: {profile: any}) => {
             <a href={`mailto:${profile.email}`}>{profile.email}</a>
             <a href="https://clarksmith.dev">
               <div className="text-[10px] cursor-pointer text-gray-600 mt-1">
-                Built by Clark Smith
+                Built by CP Smith Designs
               </div>
             </a>
           </div>

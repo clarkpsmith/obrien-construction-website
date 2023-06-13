@@ -16,7 +16,7 @@ return (
           </div>
           <div className="w-[100%]  bg-[white] rounded-xl h-[3px] mb-4"></div>
         </div>
-        <div className="m-4 text-[24px] sm:text-[32px] text-white font-bold shadow-md uppercase text-center mb-12">
+        <div className="m-4 text-[24px] sm:text-[32px] text-white font-bold drop-shadow-xl uppercase text-center mb-12">
           {companyProfile.shortDescription}
         </div>
       </div>
