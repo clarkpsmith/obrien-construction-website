@@ -14,14 +14,16 @@ const BottomContact = ({profile}: {profile: any}) => {
             </div>
             <div>Denver, CO</div>
             <a href="tel:+17202451100">{profile.phone}</a>
-            <a href={`mailto:${profile.email}`}>{profile.email}</a>
-            <a href="https://clarksmith.dev">
+            <a target="_blank" href={`mailto:${profile.email}`}>
+              {profile.email}
+            </a>
+            <a target="_blank" href="https://clarksmith.dev">
               <div className="text-[10px] cursor-pointer text-gray-600 mt-1">
                 Built by CP Smith Designs
               </div>
             </a>
           </div>
-          <a href={profile.instagram}>
+          <a target="_blank" href={profile.instagram}>
             <div className="ml-6 mt-2 cursor-pointer">
               {' '}
               <Image

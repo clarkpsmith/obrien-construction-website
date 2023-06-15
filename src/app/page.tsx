@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Certifications from '@/components/Certifications'
 import Gallery from '@/components/Gallery'
 import Testimonials from '@/components/Testimonials'
+import PreferredPartners from '@/components/PreferredPartners'
 
 export default async function Home() {
   async function fetchContentfulData() {
@@ -25,16 +26,20 @@ export default async function Home() {
     const testimonials = await client.getEntries({
       content_type: 'testimonials',
     })
+    const preferredBrands = await client.getEntries({
+      content_type: 'preferredBrands',
+    })
 
     return {
       companyProfile,
       projects,
       services,
       testimonials,
+      preferredBrands,
     }
   }
 
-  const { companyProfile, projects, services, testimonials } =
+  const { companyProfile, projects, services, testimonials, preferredBrands } =
     await fetchContentfulData()
 
   console.log({ companyProfile })
@@ -51,6 +56,7 @@ export default async function Home() {
       <Certifications certifications={companyProfile.certifications} />
       <Gallery projects={projects} />
       <Testimonials testimonials={testimonials} />
+      <PreferredPartners preferredBrands={preferredBrands} />
       <div>
         <div>
           <Footer profile={companyProfile} />

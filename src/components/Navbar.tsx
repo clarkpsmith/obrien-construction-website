@@ -23,7 +23,7 @@ const Navbar = ({ profile }: { profile: any }) => {
         <div className="sm:flex-grow"></div>
         <div></div>
         <div className="ml-4">
-          <a href={profile.instagram}>
+          <a target="_blank" href={profile.instagram}>
             <div className="mb-[6px] cursor-pointer">
               {' '}
               <Image
