@@ -18,7 +18,7 @@ export const metadata = {
     title: `O'Brien Construction`,
     description:
       'New Construction, Remodels, Restorations, Roofs, Decks, Kitchens, Bathrooms, Mitigation, Painting, Concrete, Electrical, Plumbing, Framing, Drywall, and More',
-    url: 'https://obrien-construction-website.vercel.app',
+    url: 'https://www.obrienconstruction.net',
     siteName: `O'Brien Construction`,
     images: [
       {
