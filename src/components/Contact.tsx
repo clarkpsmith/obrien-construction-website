@@ -40,11 +40,10 @@ const ContactForm = ({ profile }: { profile: any }) => {
     { resetForm }: FormikHelpers<FormValues>
   ) => {
     // Handle form submission here
-    console.log(values)
     setSending(true)
     const data = {
-      from: values.email, // Replace with your email address
-      to: 'clark.smith79@gmail.com', // Replace with your customer's email address
+      from: profile.email, // Replace with your email address
+      to: values.email, // Replace with your customer's email address
       subject: values.subject,
       text: `Name: ${values.name}\nEmail: ${values.email}\n\nMessage: ${values.message}`,
     }

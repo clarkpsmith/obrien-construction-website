@@ -17,8 +17,6 @@ const ProjectComponent = ({ data }: { data: any }) => {
     setIsMedium(isMediumSize)
   }, [isMediumSize])
 
-  console.log({ isMedium })
-
   return (
     <motion.div className="flex flex-col max-w-6xl  justify-center items-center">
       <div className="flex w-full justify-center ml:justify-start">
