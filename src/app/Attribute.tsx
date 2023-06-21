@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const Attribute = ({ attribute }: { attribute: string }) => {
   return (
     <div className="p-2">
-      <div className="flex text-[14px] sm:w-[400px]">
+      <div className="flex text-[14px] sm:w-[300px] md:w-[350px] lg:w-[450px] xl:w-[500px]">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -24,9 +24,9 @@ const Attribute = ({ attribute }: { attribute: string }) => {
           100%
         </motion.div>
       </div>
-      <motion.div className="w-[85vw] sm:w-[400px] overflow-hidden h-[20px] z-[10] relative rounded-2xl">
+      <motion.div className="w-[85vw] sm:w-[300px] md:w-[350px] lg:w-[450px] xl:w-[500px] overflow-hidden h-[20px] z-[10] relative rounded-2xl">
         <motion.div
-          className="w-[200vw] absolute sm:w-[700px] bg-black h-[30px]"
+          className="w-[200vw] absolute md:w-[700px] bg-black h-[30px]"
           initial={{ x: '-700px' }}
           animate={{ x: '0px' }}
           transition={{ duration: 4 }}

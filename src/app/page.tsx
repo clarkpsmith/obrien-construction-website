@@ -10,6 +10,7 @@ import PreferredPartners from '@/components/PreferredPartners'
 
 export default async function Home() {
   async function fetchContentfulData() {
+    console.log('FETCHING')
     const client = createClient({
       space: String(process.env.CONTENTFUL_SPACE_ID),
       accessToken: String(process.env.CONTENTFUL_ACCESS_KEY),
@@ -53,7 +54,7 @@ export default async function Home() {
         </header>
       </div>
       <AdditionalCompanyInfo companyProfile={companyProfile} />
-      <Certifications certifications={companyProfile.certifications} />
+
       <Gallery projects={projects} />
       <Testimonials testimonials={testimonials} />
       <PreferredPartners preferredBrands={preferredBrands} />

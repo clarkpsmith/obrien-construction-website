@@ -19,7 +19,7 @@ const BottomContact = ({profile}: {profile: any}) => {
             </a>
             <a target="_blank" href="https://clarksmith.dev">
               <div className="text-[10px] cursor-pointer text-gray-600 mt-1">
-                Built by CP Smith Designs
+                Built by CP Smith Solutions
               </div>
             </a>
           </div>

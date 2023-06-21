@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Attributes from '@/app/Attributes'
 import Image from 'next/image'
+import Certifications from './Certifications'
 
 const AdditionalCompanyInfo = ({ companyProfile }: { companyProfile: any }) => {
   const description = companyProfile.description.content[0].content[0].value
@@ -22,6 +23,7 @@ const AdditionalCompanyInfo = ({ companyProfile }: { companyProfile: any }) => {
         <div className="flex-wrap p-1 pl-4">{description}</div>
       </div>
       <div className="sm:w-[50%]">
+        <Certifications certifications={companyProfile.certifications} />
         <Attributes attributes={companyProfile.attributes} />
       </div>
     </div>

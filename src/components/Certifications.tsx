@@ -2,7 +2,7 @@
 
 const Certifications = ({ certifications }: { certifications: any }) => {
   return (
-    <div className="sm:pl-8 pt-4">
+    <div className="px-4 pt-0">
       <div className="text-[24px] text-center sm:text-left font-bold">
         Certifications & Education
       </div>
