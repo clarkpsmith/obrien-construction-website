@@ -7,8 +7,6 @@ import Certifications from './Certifications'
 const AdditionalCompanyInfo = ({ companyProfile }: { companyProfile: any }) => {
   const description = companyProfile.description.content[0].content[0].value
 
-  console.log({ companyProfile })
-
   return (
     <div className="flex flex-col sm:flex-row w-full">
       <div className="sm:w-[50%] p-4 pt-0">
