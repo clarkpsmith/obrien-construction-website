@@ -7,15 +7,17 @@ import Certifications from './Certifications'
 const AdditionalCompanyInfo = ({ companyProfile }: { companyProfile: any }) => {
   const description = companyProfile.description.content[0].content[0].value
 
+  console.log({ companyProfile })
+
   return (
     <div className="flex flex-col sm:flex-row w-full">
       <div className="sm:w-[50%] p-4 pt-0">
         <div className="mx-4 w-[150px] float-left rounded-md my-1 overflow-hidden h-[150px]">
           <Image
-            alt="profile pic "
+            alt="profile photo"
             width={150}
             height={150}
-            src="/images/profile-photo.jpg"
+            src={`https:${companyProfile.profilePhoto.fields.file.url}`}
           />
         </div>
 
