@@ -11,7 +11,7 @@ import Testimonial from './Testimonial'
 
 const Testimonials = ({ testimonials }: { testimonials: any }) => {
   return (
-    <div className="bg-[url('/images/wood-floor.jpeg')] bg-cover  bg-center w-full flex justify-center items-center p-6 py-10">
+    <div className="bg-[url('/images/wood-floor-low-res.jpeg')] bg-cover  bg-center w-full flex justify-center items-center p-6 py-10">
       <Swiper
         spaceBetween={30}
         pagination={{
