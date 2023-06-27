@@ -8,8 +8,9 @@ export async function POST(req: Request) {
   })
 
   const body = await req.json()
+  console.log('DATA', body.data)
   try {
-    await mg.messages().send(body)
+    await mg.messages().send(body.data)
 
     return NextResponse.json(
       { message: 'email sent successfully' },

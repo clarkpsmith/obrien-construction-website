@@ -3,6 +3,9 @@ import Image from 'next/image'
 import NavItem from './NavItem'
 
 const Navbar = ({ profile }: { profile: any }) => {
+
+  console.log({ profile })
+  
   return (
     <div>
       <div className="flex flex-row justify-center items-end  p-6 pb-1 pt-3">

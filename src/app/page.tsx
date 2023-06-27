@@ -42,6 +42,7 @@ export default async function Home() {
   const { companyProfile, projects, services, testimonials, preferredBrands } =
     await fetchContentfulData()
 
+
   return (
     <div>
       <div className="w-full">

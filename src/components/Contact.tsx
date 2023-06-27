@@ -8,9 +8,7 @@ import axios from 'axios'
 const ContactForm = ({ profile }: { profile: any }) => {
   const [sending, setSending] = useState<boolean>(false)
   const [sent, setSent] = useState<boolean>(false)
-  //need to get env vars from mailgun
-
-  //   const logo: string = profile.logo.fields.file.url
+  const [mailError, setMailError] = useState<any>(false)
 
   interface FormValues {
     name: string
@@ -34,25 +32,30 @@ const ContactForm = ({ profile }: { profile: any }) => {
     subject: Yup.string().required('Subject is required'),
     message: Yup.string().required('Message is required'),
   })
+  console.log('PROFILE', profile.email)
 
   const handleSubmit = async (
     values: FormValues,
     { resetForm }: FormikHelpers<FormValues>
   ) => {
-    // Handle form submission here
     setSending(true)
     const data = {
-      from: profile.email, // Replace with your email address
-      to: values.email, // Replace with your customer's email address
+      from: values.email,
+      to: profile.email,
       subject: values.subject,
-      text: `Name: ${values.name}\nEmail: ${values.email}\n\nMessage: ${values.message}`,
+      text: `${values.message}\n\nThanks,\n ${values.name}`,
     }
 
     try {
       const res = await axios.post('/api/sendEmail', { data })
+
+      console.log({ res })
       setSending(false)
       setSent(true)
-    } catch (error) {}
+    } catch (error) {
+      setMailError(error)
+      console.log({ error })
+    }
     resetForm()
   }
 
@@ -70,7 +73,13 @@ const ContactForm = ({ profile }: { profile: any }) => {
           onSubmit={handleSubmit}
         >
           {({ isValid }) => (
-            <Form className="max-w-md mx-auto">
+            <Form
+              onFocus={() => {
+                setSent(false)
+                setMailError(false)
+              }}
+              className="max-w-md mx-auto"
+            >
               <div className="text-[12px] sm:text-[16px] mb-4">
                 <label
                   htmlFor="name"
@@ -185,6 +194,14 @@ const ContactForm = ({ profile }: { profile: any }) => {
                   {sending ? 'Sending' : 'Send Message'}
                 </button>
               )}
+              <div className="relative">
+                <div className="absolute">
+                  <div className="text-red-500 mt-2 text-[10px]">
+                    {mailError &&
+                      `Sorry, there was an error sending your message: ${mailError.message}`}
+                  </div>
+                </div>
+              </div>
             </Form>
           )}
         </Formik>
